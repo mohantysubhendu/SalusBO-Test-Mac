@@ -28,7 +28,7 @@ public class Listner implements IReporter {
 	
 	//This is the customize emailabel report template file path.
 	//private static final String emailableReportTemplateFile = "/home/subhendu/workspace/salus.backOffice/src/test/java/Salus/salus/backOffice/customize-emailable-report-template.html";
-	private static final String emailableReportTemplateFile = "/Users/Shared/Jenkins/Home/workspace/dev-test-selenium-customize/src/test/java/Salus/salus/backOffice/customize-emailable-report-template.html";
+	private static final String emailableReportTemplateFile = "/Users/Shared/Jenkins/Home/workspace/SalusBO-TestAutomation/src/test/java/Salus/salus/backOffice/customize-emailable-report-template.html";
 	@Override
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 		
