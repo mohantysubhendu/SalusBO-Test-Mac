@@ -47,7 +47,7 @@ public class Listner implements IReporter {
 			String customTestMethodSummary = this.getTestMehodSummary(suites);
 			
 			// Replace report title place holder with custom title.
-			customReportTemplateStr = customReportTemplateStr.replaceAll("\\$TestNG_Custom_Report_Title\\$", customReportTitle);
+			customReportTemplateStr = customReportTemplateStr.replaceAll("\\$TestNG_Custom_Report_Salus_BO\\$", customReportTitle);
 			
 			// Replace test suite place holder with custom test suite summary.
 			customReportTemplateStr = customReportTemplateStr.replaceAll("\\$Test_Case_Summary\\$", customSuiteSummary);
@@ -112,7 +112,7 @@ public class Listner implements IReporter {
 			int totalTestCount = 0;
 			int totalTestPassed = 0;
 			int totalTestFailed = 0;
-			int totalTestSkipped = 0;
+			//int totalTestSkipped = 0;
 			
 			for(ISuite tempSuite: suites)
 			{
@@ -127,10 +127,10 @@ public class Listner implements IReporter {
 					ITestContext testObj = result.getTestContext();
 					
 					totalTestPassed = testObj.getPassedTests().getAllMethods().size();
-					totalTestSkipped = testObj.getSkippedTests().getAllMethods().size();
+					//totalTestSkipped = testObj.getSkippedTests().getAllMethods().size();
 					totalTestFailed = testObj.getFailedTests().getAllMethods().size();
 					
-					totalTestCount = totalTestPassed + totalTestSkipped + totalTestFailed;
+					totalTestCount = totalTestPassed + totalTestFailed;
 					
 					/* Test name. */
 					retBuf.append("<td>");
@@ -270,9 +270,9 @@ public class Listner implements IReporter {
 					retBuf.append(failedTestMethodInfo);
 					
 					/* Get skipped test method related data. */
-					IResultMap testSkippedResult = testObj.getSkippedTests();
+					/*IResultMap testSkippedResult = testObj.getSkippedTests();
 					String skippedTestMethodInfo = this.getTestMethodReport(testName, testSkippedResult, false, true);
-					retBuf.append(skippedTestMethodInfo);
+					retBuf.append(skippedTestMethodInfo); */
 					
 					/* Get passed test method related data. */
 					IResultMap testPassedResult = testObj.getPassedTests();
@@ -298,12 +298,12 @@ public class Listner implements IReporter {
 		
 		String color = "green";
 		
-		if(skippedResult)
+	/*	if(skippedResult)
 		{
 			resultTitle += " - Skipped ";
 			color = "#F2F283";
 		}else
-		{
+		{  */
 			if(!passedReault)
 			{
 				resultTitle += " - Failed ";
@@ -313,7 +313,7 @@ public class Listner implements IReporter {
 				resultTitle += " - Passed ";
 				color = "#90C8A6";
 			}
-		}
+		//}
 		
 		retStrBuf.append("<tr bgcolor=" + color + "><td colspan=7><center><b>" + resultTitle + "</b></center></td></tr>");
 			
