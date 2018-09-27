@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <listeners>
+  
+  	<listner class-name="class=Salus.salus.backOffice.Listner" />
+  	
+  </listeners> 
+  
+  
+  <test name="Test">
+    <classes>
+      <class name="Salus.salus.backOffice.NewTest"/>
+    </classes>
+  </test>
+  
+  <test name="Test1">
+  	<classes>
+  		<class name="selenium1.NewTest1"/>
+  	</classes>
+  </test>
+  
+  <test name="Test2">
+  	<classes>
+  		<class name="selenium2.NewTest2"/>
+  	</classes>
+  </test>
+  
+  <test name="OEMAdminTest cases">
+  
+  	<classes>
+  		<class name="selenium3.NewTest3"/>
+  	</classes>
+  
+  </test>
+  
+   <!-- Test -->
+</suite> <!-- Suite -->
