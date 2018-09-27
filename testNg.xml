@@ -7,19 +7,19 @@
   </listeners> 
   
   
-  <test name="Test">
+  <test name="CompanyAdmin test cases">
     <classes>
       <class name="Salus.salus.backOffice.NewTest"/>
     </classes>
   </test>
   
-  <test name="Test1">
+  <test name="CompanyAdmin test cases">
   	<classes>
   		<class name="selenium1.NewTest1"/>
   	</classes>
   </test>
   
-  <test name="Test2">
+  <test name="CompanyAdmin test cases">
   	<classes>
   		<class name="selenium2.NewTest2"/>
   	</classes>
