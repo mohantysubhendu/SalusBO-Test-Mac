@@ -161,7 +161,7 @@ public class Listner implements IReporter {
 					String browserType = tempSuite.getParameter("browserType");
 					if(browserType==null || browserType.trim().length()==0)
 					{
-						browserType = "Chrome";
+						browserType = "Chrome 2.41";
 					}
 					
 					/* Append browser type. */
